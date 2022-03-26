@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Markers</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+    </style>
+    <!-- jsFiddle will insert css and js -->
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly&channel=2"
+      async
+    ></script>
+
+    <script>
+
+        function initMap() {
+
+            // Automate this process using the output of Ahsan's code 
+            const myLatLng = { lat: 43, lng: -83.0163441 };
+            const myLatLng2 = { lat: 42.2450995, lng: -83.0122883 };
+
+            const myLatLng3 = { lat: 42.2456973, lng: -83.0102814 };
+            const myLatLng4 = { lat: 42.2430218, lng: -83.0098301 };
+
+            const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 4,
+            center: myLatLng,
+         });
+
+        new google.maps.Marker({
+            position: myLatLng,
+            map,
+            title: "Hello World!",
+        });
+
+        new google.maps.Marker({
+            position: myLatLng2,
+            map,
+            title: "Hello World!",
+        });
+
+        new google.maps.Marker({
+            position: myLatLng3,
+            map,
+            title: "Hello World!",
+        });
+
+        new google.maps.Marker({
+            position: myLatLng4,
+            map,
+            title: "Hello World!",
+        });
+}
+    </script>
+  </body>
+</html>
