@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Markers</title>
+    <title>Optimal New Charger Locations in Windsor</title>
+    <script type="text/javascript" src="hwy_cords.json"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js%22%3E></script> -->
     <style>
         /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -30,19 +32,23 @@ body {
     ></script>
 
     <script>
+        
+        var lat = [42.1359798, 42.3050809, 42.1729657, 42.2307952, 42.3009723]
+        var lon = [-82.8749683, -82.5555676, -82.8432092, -82.9883005, -83.0644944]
+
 
         function initMap() {
 
             // Automate this process using the output of Ahsan's code 
-            const myLatLng = { lat: 43, lng: -83.0163441 };
-            const myLatLng2 = { lat: 42.2450995, lng: -83.0122883 };
-
-            const myLatLng3 = { lat: 42.2456973, lng: -83.0102814 };
-            const myLatLng4 = { lat: 42.2430218, lng: -83.0098301 };
+            const myLatLng = { lat: lat[0], lng: lon[0]};
+            const myLatLng2 = { lat: lat[1], lng: lon[1]};
+            const myLatLng3 = { lat: lat[2], lng: lon[2]};
+            const myLatLng4 = { lat: lat[3], lng: lon[3]};
+            const myLatLng5 = { lat: lat[4], lng: lon[4]};
 
             const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 4,
-            center: myLatLng,
+            zoom: 10,
+            center: myLatLng3,
          });
 
         new google.maps.Marker({
@@ -65,6 +71,12 @@ body {
 
         new google.maps.Marker({
             position: myLatLng4,
+            map,
+            title: "Hello World!",
+        });
+
+        new google.maps.Marker({
+            position: myLatLng5,
             map,
             title: "Hello World!",
         });
