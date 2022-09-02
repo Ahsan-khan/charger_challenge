@@ -34,6 +34,7 @@ research and trial and error we found that the Jupyter notebook was the best.
 
 After polishing our back end and algorithm it was challenging for us to link the front end and back end aspects of our project since we were using python to build the backend. 
 
+Project link: https://devpost.com/software/opcharge
 
 If you are loading the notebooks you will need these two csvs
 https://drive.google.com/file/d/1KGUuJYERN--byZ9hy--o2apezBA6vqq_/view?usp=sharing
